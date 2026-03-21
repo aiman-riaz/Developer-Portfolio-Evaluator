@@ -1,0 +1,36 @@
+const mongoose = require('mongoose');
+const ReportSchema = new mongoose.Schema(
+  {
+    username: { type: String, required: true, unique: true, index: true },
+    avatarUrl: String,
+    name: String,
+    bio: String,
+    followers: Number,
+    publicRepos: Number,
+    scores: {
+      activity: Number,    
+      codeQuality: Number,
+      diversity: Number,
+      community: Number,
+      hiringReady: Number,
+      overall: Number,     
+    },
+    topRepos: [
+      {
+        name: String,
+        stars: Number,
+        forks: Number,
+        language: String,
+        description: String,
+        url: String,
+      },
+    ],
+    languages: [{ name: String, percent: Number }],
+    heatmapData: mongoose.Schema.Types.Mixed, 
+    shareUrl: String,
+    cachedAt: { type: Date, default: Date.now },
+    expiresAt: { type: Date, index: { expires: 0 } }, 
+  },
+  { timestamps: true }
+);
+module.exports = mongoose.model('Report', ReportSchema);
