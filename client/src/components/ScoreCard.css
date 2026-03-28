@@ -1,5 +1,4 @@
 .scorecard { margin-bottom: 24px; }
-
 .sc-profile {
   display: flex;
   gap: 20px;
@@ -7,7 +6,6 @@
   flex-wrap: wrap;
   margin-bottom: 28px;
 }
-
 .sc-avatar {
   width: 88px;
   height: 88px;
@@ -16,28 +14,23 @@
   flex-shrink: 0;
   object-fit: cover;
 }
-
 .sc-info {
   flex: 1;
   min-width: 180px;
 }
-
 .sc-name {
   font-size: 22px;
   font-weight: 800;
   letter-spacing: -0.5px;
   margin-bottom: 6px;
 }
-
 .sc-handle { margin-bottom: 8px; }
-
 .sc-bio {
   font-size: 14px;
   color: var(--muted);
   line-height: 1.5;
   margin-bottom: 10px;
 }
-
 .sc-stats {
   display: flex;
   gap: 16px;
@@ -45,32 +38,26 @@
   color: var(--muted);
   font-family: var(--font-mono);
 }
-
 .sc-stats strong { color: var(--text); }
-
 .sc-ring {
   display: flex;
   flex-direction: column;
   align-items: center;
   flex-shrink: 0;
 }
-
 .ring-svg {
   width: 130px;
   height: 130px;
 }
-
 .ring-value {
   font-family: var(--font-display);
   font-size: 36px;
   font-weight: 800;
 }
-
 .ring-label {
   font-family: var(--font-mono);
   font-size: 14px;
 }
-
 .sc-overall-label {
   font-size: 12px;
   color: var(--muted);
@@ -79,16 +66,12 @@
   letter-spacing: 1px;
   margin-top: 4px;
 }
-
-/* ── Bars ── */
 .sc-bars {
   display: flex;
   flex-direction: column;
   gap: 14px;
 }
-
 .score-bar-row {}
-
 .score-bar-meta {
   display: flex;
   justify-content: space-between;
@@ -96,18 +79,14 @@
   margin-bottom: 6px;
   font-family: var(--font-mono);
 }
-
 .score-bar-label { color: var(--muted); }
-
 .score-bar-val { font-weight: 700; }
-
 .score-bar-track {
   height: 6px;
   background: var(--surface2);
   border-radius: 99px;
   overflow: hidden;
 }
-
 .score-bar-fill {
   height: 100%;
   border-radius: 99px;
