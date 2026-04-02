@@ -166,7 +166,7 @@ export default function Report() {
                       </span>
                     </div>
                   </div>
-
+                
                   <div className="compare-table">
                     {['activity','codeQuality','diversity','community','hiringReady'].map((key) => {
                       const labels = {
