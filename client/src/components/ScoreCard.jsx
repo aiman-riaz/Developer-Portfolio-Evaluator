@@ -19,7 +19,7 @@ function Ring({ value }) {
 
   return (
     <svg className="ring-svg" viewBox="0 0 180 180">
-      <circle cx="90" cy="90" r={r} fill="none" stroke="#2a2a3a" strokeWidth="12" />
+      <circle cx="90" cy="90" r={r} fill="none" stroke="#e2e2ea" strokeWidth="12" />
       <circle
         cx="90" cy="90" r={r}
         fill="none"

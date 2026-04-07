@@ -50,10 +50,10 @@ export default function RadarChart({ scores, compareScores, username, compareUse
           backdropColor: 'transparent',
           font: { family: 'Space Mono', size: 10 },
         },
-        grid: { color: '#2a2a3a' },
-        angleLines: { color: '#2a2a3a' },
+        grid: { color: '#e2e2ea' },
+        angleLines: { color: '#e2e2ea' },
         pointLabels: {
-          color: '#e8e8f0',
+          color: '#1a1a24',
           font: { family: 'Syne', size: 12, weight: '700' },
         },
       },
@@ -61,16 +61,16 @@ export default function RadarChart({ scores, compareScores, username, compareUse
     plugins: {
       legend: {
         labels: {
-          color: '#e8e8f0',
+          color: '#1a1a24',
           font: { family: 'Syne', size: 12 },
           boxWidth: 12,
         },
       },
       tooltip: {
-        backgroundColor: '#1a1a24',
-        borderColor: '#2a2a3a',
+        backgroundColor: '#ffffff',
+        borderColor: '#e2e2ea',
         borderWidth: 1,
-        titleColor: '#e8e8f0',
+        titleColor: '#1a1a24',
         bodyColor: '#6b6b80',
         titleFont: { family: 'Syne', weight: '700' },
         bodyFont: { family: 'Space Mono' },
