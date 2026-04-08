@@ -34,7 +34,7 @@ export default function SearchBar({ initialValue = '' }) {
           spellCheck="false"
         />
         <button className="search-btn" type="submit">
-          Analyse
+          Search
         </button>
       </div>
       {error && <p className="search-error">{error}</p>}

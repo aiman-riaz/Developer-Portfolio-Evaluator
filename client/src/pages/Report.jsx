@@ -12,7 +12,7 @@ function Loader() {
   return (
     <div className="loader-wrap">
       <div className="loader-ring" />
-      <p className="loader-text">Fetching GitHub data…</p>
+      <p className="loader-text">Loading</p>
     </div>
   );
 }
@@ -21,9 +21,9 @@ function ErrorState({ message, onRetry }) {
   return (
     <div className="error-state card">
       <span className="error-icon">⚠️</span>
-      <h2>Something went wrong</h2>
+      <h2>Error</h2>
       <p>{message}</p>
-      <button className="retry-btn" onClick={onRetry}>Try again</button>
+      <button className="retry-btn" onClick={onRetry}>Retry</button>
     </div>
   );
 }
@@ -82,13 +82,9 @@ export default function Report() {
 
   return (
     <div className="report-page">
-      <div className="report-bg">
-        <div className="blob blob1" />
-        <div className="blob blob2" />
-      </div>
+      <div className="report-bg"></div>
 
       <div className="report-container container">
-        {/* Top nav */}
         <header className="report-nav">
           <button className="back-btn" onClick={() => navigate('/')}>
             ← DevScore
@@ -126,8 +122,7 @@ export default function Report() {
 
             
             <div className="compare-section card fade-up">
-              <h3 className="compare-title">⚔️ Compare Mode</h3>
-              <p className="compare-sub">Enter another GitHub username to overlay their scores.</p>
+              <h3 className="compare-title">Compare</h3>
               <div className="compare-controls">
                 <input
                   className="compare-input"

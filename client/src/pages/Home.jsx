@@ -7,35 +7,33 @@ export default function Home() {
   const navigate = useNavigate();
   return (
     <div className="home">
-      <div className="home-bg">
-        <div className="blob blob1" />
-        <div className="blob blob2" />
-        <div className="grid-overlay" />
-      </div>
+      <div className="home-bg"></div>
       <div className="home-content container">
         <header className="home-header">
           <div className="logo-mark">
-            <svg width="36" height="36" viewBox="0 0 36 36" fill="none">
-              <rect width="36" height="36" rx="10" fill="#7c6af7" />
-              <path d="M10 26l8-16 8 16" stroke="#fff" strokeWidth="2.5" strokeLinecap="round" strokeLinejoin="round"/>
-              <path d="M13 21h10" stroke="#fff" strokeWidth="2.5" strokeLinecap="round"/>
+            <svg width="36" height="36" viewBox="0 0 36 36" fill="none" xmlns="http://www.w3.org/2000/svg">
+              <rect width="36" height="36" rx="10" fill="url(#grad)" />
+              <path d="M18 7 L27 12.5 L27 23.5 L18 29 L9 23.5 L9 12.5 Z" stroke="white" strokeWidth="2" strokeLinejoin="round"/>
+              <path d="M18 7 L18 18 L27 12.5" stroke="white" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"/>
+              <path d="M9 12.5 L18 18 L18 29" stroke="white" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"/>
+              <path d="M9 23.5 L18 18 L27 23.5" stroke="white" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"/>
+              <circle cx="18" cy="18" r="2.5" fill="white" />
+              <defs>
+                <linearGradient id="grad" x1="0" y1="0" x2="36" y2="36" gradientUnits="userSpaceOnUse">
+                  <stop stopColor="#6b5aed" />
+                  <stop offset="1" stopColor="#d64d7b" />
+                </linearGradient>
+              </defs>
             </svg>
           </div>
           <span className="logo-text">DevScore</span>
         </header>
         <div className="hero">
-          <div className="hero-tag badge">Free · No AI Subscription · GitHub API</div>
           <h1 className="hero-title">
-            Analyse any GitHub <br />
-            <span className="hero-gradient">developer profile</span>
+            Evaluate <span className="hero-gradient">GitHub</span> profiles
           </h1>
-          <p className="hero-sub">
-            Get a detailed scorecard covering activity, code quality, diversity,
-            community impact and hiring readiness — all from public data.
-          </p>
           <SearchBar />
           <div className="examples">
-            <span className="examples-label">Try:</span>
             {EXAMPLES.map((u) => (
               <button
                 key={u}
@@ -46,20 +44,11 @@ export default function Home() {
               </button>
             ))}
           </div>
-        </div>
-        <div className="features">
-          {[
-            { icon: '📊', title: 'Live Scoring', desc: '5 weighted categories, computed in real time' },
-            { icon: '📅', title: 'Activity Heatmap', desc: 'GitHub-style contribution calendar' },
-            { icon: '🔗', title: 'Shareable URL', desc: 'Every report gets a unique link for LinkedIn' },
-            { icon: '⚡', title: '24-hr Cache', desc: 'MongoDB-backed, no repeat API hits' },
-          ].map((f) => (
-            <div key={f.title} className="feature-card card">
-              <span className="feature-icon">{f.icon}</span>
-              <h3 className="feature-title">{f.title}</h3>
-              <p className="feature-desc">{f.desc}</p>
-            </div>
-          ))}
+          <ul className="simple-features">
+            <li>Activity Heatmaps</li>
+            <li>5-Category Scoring</li>
+            <li>Profile Comparisons</li>
+          </ul>
         </div>
       </div>
     </div>
